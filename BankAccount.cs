@@ -13,13 +13,17 @@ namespace WinFormsApp1
         public decimal Balance { get; private set; }
 
         public string AccountType { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
 
-        public BankAccount(string fullName, decimal balance, string accountType)
+        public BankAccount(string fullName, decimal balance, string accountType, string username, string password)
         {
             FullName = fullName;
             AccountNumber = GetAccountNumber();
             Balance = balance;
             AccountType = accountType;
+            Username = username;
+            Password = password;
         }
         List<Transaction> transactions { get; set; } = new List<Transaction>();
         private string GetAccountNumber()

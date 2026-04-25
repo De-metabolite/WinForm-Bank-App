@@ -84,6 +84,7 @@
             guna2HtmlLabel3.Size = new Size(74, 24);
             guna2HtmlLabel3.TabIndex = 10;
             guna2HtmlLabel3.Text = "Sign up";
+            guna2HtmlLabel3.Click += guna2HtmlLabel3_Click;
             // 
             // guna2HtmlLabel2
             // 

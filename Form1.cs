@@ -60,15 +60,15 @@ namespace WinFormsApp1
 
         private void guna2GradientButton1_Click(object sender, EventArgs e)
         {
-            if (!Isvalid()) 
+            if (Isvalid())
             {
                 if (txtPassword.Text.Length < 5)
                 {
                     MessageBox.Show("The password length is too short. The password should be atleast 6 character.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                else if (username == txtUsername.Text && password == txtPassword.Text) 
+                else if (username == txtUsername.Text && password == txtPassword.Text)
                 {
-                 MessageBox.Show("Login Successful","Information", MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    MessageBox.Show("Login Successful", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Dashboard dashboard = new Dashboard();
                     dashboard.Show();
                     this.Hide();
@@ -77,14 +77,21 @@ namespace WinFormsApp1
                 {
                     MessageBox.Show("Invalid Credetials", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-            
+
             }
         }
 
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
-            
 
+
+        }
+
+        private void guna2HtmlLabel3_Click(object sender, EventArgs e)
+        {
+            SignUp signup = new SignUp();
+            signup.Show();
+            this.Hide();
         }
     }
 }

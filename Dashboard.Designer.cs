@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            lblBalance = new Guna.UI2.WinForms.Guna2HtmlLabel();
             SuspendLayout();
             // 
             // guna2HtmlLabel1
@@ -42,14 +43,24 @@
             guna2HtmlLabel1.Text = "DASHBOARD";
             guna2HtmlLabel1.Click += guna2HtmlLabel1_Click;
             // 
+            // lblBalance
+            // 
+            lblBalance.BackColor = Color.Transparent;
+            lblBalance.Location = new Point(666, 39);
+            lblBalance.Name = "lblBalance";
+            lblBalance.Size = new Size(3, 2);
+            lblBalance.TabIndex = 1;
+            // 
             // Dashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(lblBalance);
             Controls.Add(guna2HtmlLabel1);
             Name = "Dashboard";
             Text = "Dashboard";
+            Load += Dashboard_Load;
             ResumeLayout(false);
             PerformLayout();
         }
@@ -57,5 +68,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblBalance;
     }
 }

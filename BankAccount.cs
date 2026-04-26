@@ -116,7 +116,7 @@ namespace WinFormsApp1
     }
     public static class Customers
     {
-        static List<BankAccount> accounts = new List<BankAccount>();
+       public static List<BankAccount> accounts = new List<BankAccount>();
 
     }
 }
